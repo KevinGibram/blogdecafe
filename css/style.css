@@ -81,6 +81,7 @@ img{
     text-align: center;
     color: var(--blanco);
     margin-top: 5rem;
+    line-height: 5rem;
 }
 @media (min-width: 768px) {
   .header__texto{
@@ -134,9 +135,9 @@ img{
     margin-bottom: 2rem;
 }
 
-.entrada :last-of-type{
-    border-top: none;
-    margin-bottom: 0;
+.entrada:last-of-type{
+    border-bottom: none;
+    margin-bottom: 2rem;
 }
 
 .boton{
@@ -149,7 +150,6 @@ img{
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
-
 }
 @media (min-width: 768px) {
   .boton{
@@ -159,4 +159,69 @@ img{
 
 .boton--principal{
     background-color: var(--negro);
+}
+
+.cursos{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.877);
+    margin-bottom: 2rem;
+}
+
+.cursos:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+ul {
+    list-style: none;
+  }
+
+.widget--curso__label{
+    font-family: var(--fuenteHeadung);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.boton--aside{
+    background-color: var(--primario);
+}
+
+/* footer */
+.footer{
+    background-color: var(--negro);
+    margin-top: 2rem;
+    padding: 2rem 2rem;
+}
+
+/* Pagina-Nosotros */
+@media (min-width: 768px){
+    .sobre-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Pagina-Cursos */
+@media (min-width: 768px) {
+  .curso{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+  }
+}
+.curso{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.877);
+    margin-bottom: 3rem;
+}
+
+.curso:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+
+/* Pagina Nosotros */
+@media (min-width: 768px) {
+  .nosotros--imagen{
+    display:block;
+    margin:auto;
+}
 }

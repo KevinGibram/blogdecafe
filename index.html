@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina web de blog de cafe">
     <title>BlogDeCafe</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+
+<!-- preafech -->
+<link rel="preafech" href="nosotros.html" as="document">
+    
+
+<!--  preloand -->
+<link rel="preloand" href="css/normalize.css" as="style">
+<link rel="stylesheet" href="css/normalize.css">
+
+<link rel="preloand" href="css/style.css" as="style">
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="preloand" href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" as="fonts">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" as="fonts">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 </head>
 <body>
 
@@ -39,7 +52,10 @@
             <h3>Nuestro Blog</h3>
                 <article class="entrada">
                     <div class="entrada__imagen">
-                        <img src="blogdecafe/img/blog1.jpg" alt="imagen de blog">
+                        <picture>
+                            <source loading="lazy" srcset="blogdecafe/img/blog1.webp" type="image/webp">
+                            <img loading="lazy" src="blogdecafe/img/blog1.jpg" alt="imagen de blog">
+                        </picture>                        
                     </div>
                     <div class="entrada__contenido">
                         <h4 class="no-margin">Tipos de granos</h4>
@@ -49,7 +65,10 @@
                 </article>
                 <article class="entrada">
                     <div class="entrada__imagen">
-                        <img src="blogdecafe/img/blog2.jpg" alt="imagen de blog">
+                        <picture>
+                            <source loading="lazy" srcset="blogdecafe/img/blog2.webp" type="image/webp">
+                            <img loading="lazy" src="blogdecafe/img/blog2.jpg" alt="imagen de blog">
+                        </picture>
                     </div>
                     <div class="entrada__contenido">
                         <h4 class="no-margin">Tres deliciosas recetas de café</h4>
@@ -59,7 +78,10 @@
                 </article>
                 <article class="entrada">
                     <div class="entrada__imagen">
-                        <img src="blogdecafe/img/blog3.jpg" alt="imagen de blog">
+                        <picture>
+                            <source loading="lazy" srcset="blogdecafe/img/blog3.webp" type="image/webp">
+                            <img loading="lazy" src="blogdecafe/img/blog3.jpg" alt="imagen de blog">
+                        </picture>
                     </div>
                     <div class="entrada__contenido">
                         <h4 class="no-margin">Beneficios del café</h4>
@@ -116,5 +138,6 @@
             </div>
     </footer>
     
+    <script src="js/modernirz.js"></script>
 </body>
 </html>

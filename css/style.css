@@ -72,9 +72,10 @@ img{
 .webp .header{
     background-image: url(../blogdecafe/img/banner.webp);
 }
-.no-webp header{
+.no-webp .header{
     background-image: url(../blogdecafe/img/banner.jpg);
 }
+
 .header{
     height: 60rem;
     background-size: cover;

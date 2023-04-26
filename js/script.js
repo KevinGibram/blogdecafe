@@ -55,13 +55,13 @@ formulario.addEventListener('submit', function(e){
    //Validar formulario
     const {nombre, email, textarea} = datos;
     if( nombre === '' || email === '' || textarea === '' ){
-        mostrarError('Todos los datos son obligatorios');
+        mostarAlerta('Todos los datos son obligatorios' , true);
 
         return; //Corta la ejecucion del codigo
     }
     
    //Enviar formulario
-   mostrarEnvio('Enviando Formulario');
+   mostarAlerta('Enviando Formulario');
 })
 
 //Tomando datos del imput
@@ -74,27 +74,19 @@ formulario.addEventListener('submit', function(e){
 }
 
 //Muestra mensaje en pantalla
+function mostarAlerta(mensaje, error = null){
+    const alerta = document.createElement('P') //creando el parrafo 
+    alerta.textContent = mensaje; // agregandole de contenido el mensaje
 
-function mostrarError(mensaje){
-    const error = document.createElement('P') //creando el parrafo 
-    error.textContent = mensaje; // agregandole de contenido el mensaje
-    error.classList.add('error'); //agregando una clase 
+    if(error){
+        alerta.classList.add('error'); //agregando una clase 
+    } else {
+        alerta.classList.add('envio'); //agregando una clase 
+    }
 
-    formulario.appendChild( error ); //mostrando en pantalla
-
-    setTimeout(function() {
-        error.remove(); // eliminando el párrafo después de 3 segundos
-      }, 3000);
-}
-
-function mostrarEnvio(mensaje){
-    const envio = document.createElement('P') //creando el parrafo 
-    envio.textContent = mensaje; // agregandole de contenido el mensaje
-    envio.classList.add('envio'); //agregando una clase 
-
-    formulario.appendChild( envio ); //mostrando en pantalla
+    formulario.appendChild( alerta ); //mostrando en pantalla
 
     setTimeout(function() {
-        envio.remove(); // eliminando el párrafo después de 3 segundos
+        alerta.remove(); // eliminando el párrafo después de 3 segundos
       }, 3000);
-}
+};

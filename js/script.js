@@ -23,10 +23,25 @@
 
 // console.log (2);
 
-const btclick = document.querySelector('boton--principal'); //selec un elemento del html
+const btprincipal = document.querySelector('#btprincipal'); //selec un elemento del html
 
-document.addEventListener('click', function(evento){ //estamos creando un evento (e, event, evento evt)
-    console.log(evento);
+btprincipal.addEventListener('click', function(evento){ //estamos creando un evento (e, event, evento evt)
     evento.preventDefault(); //quita la redireccion
     console.log('cargando evento');
 })
+
+
+
+//tomar valores de un label
+
+ const nombre = document.querySelector('#nombre');
+ const email = document.querySelector('#email');
+ const textarea = document.querySelector('#textarea');
+
+ nombre.addEventListener('input', leerTexto)
+ email.addEventListener('input', leerTexto)
+ textarea.addEventListener('input', leerTexto)
+
+ function leerTexto(e) {
+    console.log(e.target.value)
+}

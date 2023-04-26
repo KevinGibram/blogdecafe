@@ -272,5 +272,19 @@ ul {
         margin: -5rem auto 0 auto; 
         width: 90%;
         padding: 5rem;
-    }
+    }   
+}
+
+.error{
+    background-color: rgb(255, 0, 0);
+    padding: 1rem;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.envio{
+    background-color: rgb(0, 204, 78);
+    padding: 1rem;
+    text-align: center;
+    color: var(--blanco);
 }
